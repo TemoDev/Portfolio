@@ -1,0 +1,55 @@
+<nav class="py-1">
+  <div class="container-xxl position-relative">
+    <!-- Logo -->
+    <div class="logo">TK</div>
+    <!-- Burger Button -->
+    <button class="burger" #navBtn type="button" (click)="toggleNav()">
+      <div class="burger-line burger-line-1"></div>
+      <div class="burger-line burger-line-2"></div>
+      <div class="burger-line burger-line-3"></div>
+    </button>
+
+    <!-- Navigation links wrapper -->
+    <div class="nav-wrapper d-flex" #navWrapper>
+      <ul class="nav-links mb-0 align-self-center" #nav>
+        <li><a href="#" class="nav-link"> home </a></li>
+        <li><a href="#" class="nav-link"> about </a></li>
+        <li><a href="#" class="nav-link"> portfolio </a></li>
+        <li><a href="#" class="nav-link"> contact </a></li>
+        <!-- Social Links -->
+        <div class="d-flex align-items-center">
+          <li>
+            <a href="#" class="nav-link">
+              <svg
+                width="2.5rem"
+                height="2.5rem"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 0C5.37109 0 0 5.37109 0 12C0 17.6211 3.87109 22.3281 9.09375 23.6289C9.03516 23.4688 9 23.2812 9 23.0469V20.9961C8.51172 20.9961 7.69531 20.9961 7.49219 20.9961C6.67188 20.9961 5.94141 20.6445 5.58594 19.9883C5.19531 19.2578 5.125 18.1445 4.15234 17.4609C3.86328 17.2344 4.08203 16.9766 4.41406 17.0117C5.03125 17.1836 5.53906 17.6055 6.01953 18.2305C6.5 18.8594 6.72266 19 7.61719 19C8.05078 19 8.69922 18.9766 9.30859 18.8789C9.63672 18.0469 10.2031 17.2812 10.8945 16.918C6.89844 16.5078 4.99219 14.5195 4.99219 11.8203C4.99219 10.6562 5.48828 9.53516 6.32812 8.58594C6.05469 7.64844 5.70703 5.73047 6.43359 5C8.23437 5 9.32031 6.16406 9.58203 6.48047C10.4766 6.17578 11.4609 6 12.4961 6C13.5312 6 14.5195 6.17578 15.418 6.48438C15.6758 6.17188 16.7617 5 18.5664 5C19.2969 5.73047 18.9453 7.65625 18.668 8.59375C19.5039 9.53906 19.9961 10.6602 19.9961 11.8203C19.9961 14.5156 18.0898 16.5039 14.1016 16.918C15.1992 17.4883 16 19.1016 16 20.3125V23.0469C16 23.1523 15.9766 23.2266 15.9648 23.3164C20.6406 21.6758 24 17.2344 24 12C24 5.37109 18.6289 0 12 0Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link p-0" href="#">
+              <svg
+                width="2.5rem"
+                height="2.5rem"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 0H5C2.239 0 0 2.239 0 5V19C0 21.761 2.239 24 5 24H19C21.762 24 24 21.761 24 19V5C24 2.239 21.762 0 19 0ZM8 19H5V8H8V19ZM6.5 6.732C5.534 6.732 4.75 5.942 4.75 4.968C4.75 3.994 5.534 3.204 6.5 3.204C7.466 3.204 8.25 3.994 8.25 4.968C8.25 5.942 7.467 6.732 6.5 6.732ZM20 19H17V13.396C17 10.028 13 10.283 13 13.396V19H10V8H13V9.765C14.396 7.179 20 6.988 20 12.241V19Z"
+                />
+              </svg>
+            </a>
+          </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>
