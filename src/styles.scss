@@ -1,29 +1,43 @@
 // Font
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
 
-$font-family-sans-serif: 'Montserrat';
+$font-family-sans-serif: "Montserrat";
 
 // Colors
-$primary: #FFE86D;
+$primary: #ffe86d;
 $secondary: #089239;
-$body-bg: #010D04;
-$body-color: #FFFFFF;
-$text-light: #FFFFFF;
+$body-bg: #010d04;
+$body-color: #ffffff;
+$text-light: #ffffff;
 $dark: #011105;
 $font-weight-bolder: 500;
 $border-radius: 20px;
 $spacer: 2rem;
 
+$display-font-sizes: (
+  1: 8rem,
+  2: 4.5rem,
+);
+
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+  overflow-x: hidden;
+}
 
 *,
 *::after,
-*::before{
-    margin: 0;
-    padding: 0;
+*::before {
+  margin: 0;
+  padding: 0;
 }
 
-h1,h2,h3,h4,h5,h6{
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }

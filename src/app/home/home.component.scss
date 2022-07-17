@@ -1,0 +1,151 @@
+@import "../../styles.scss";
+
+.intro-container {
+  z-index: 1000;
+}
+
+.intro-cta {
+  display: inline-block;
+}
+
+.intro-cta:hover ~ .intro-circle-1 {
+  transform: translate(-5%, -5%) rotate(67deg) scale(0.9);
+}
+.intro-cta:hover ~ .intro-circle-2 {
+  transform: translate(5%, 5%) scale(0.9);
+}
+
+.intro-cta {
+  pointer-events: none;
+  position: relative;
+}
+
+.aboutMe-btn {
+  position: absolute;
+  right: -10%;
+  bottom: -40%;
+  z-index: 10;
+  pointer-events: auto;
+  cursor: pointer;
+  height: 4rem;
+  width: 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background-color: rgba(8, 146, 57, 0.1);
+  backdrop-filter: blur(1rem);
+
+  transition: all 0.3s ease-in-out;
+
+  & .aboutMe-btn-arrow {
+    transform: rotate(135deg);
+
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.aboutMe-btn-text {
+  position: absolute;
+  z-index: -10;
+  width: 180%;
+  height: 180%;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+
+  animation: aboutMe-btn-text-animation 10s linear infinite;
+}
+
+@keyframes aboutMe-btn-text-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.aboutMe-btn:hover {
+  transform: scale(0.97);
+}
+.aboutMe-btn:hover .aboutMe-btn-text {
+  width: 180%;
+  height: 180%;
+  opacity: 1;
+}
+
+.aboutMe-btn:hover .aboutMe-btn-arrow {
+  transform: rotate(0deg) scale(0.95);
+}
+
+.intro-circle-1 {
+  position: absolute;
+  width: 35rem;
+  height: 80rem;
+  top: -50rem;
+  left: -15rem;
+  z-index: -1000;
+  transform: rotate(64deg);
+  background-color: $secondary;
+  border-radius: 50%;
+  filter: blur(15rem);
+  transition: all 0.3s ease-in-out;
+}
+
+.intro-circle-2 {
+  display: none;
+  position: absolute;
+  width: 35rem;
+  height: 80rem;
+  bottom: -40rem;
+  right: -50%;
+  z-index: -1000;
+  background-color: $secondary;
+  border-radius: 50%;
+  filter: blur(15rem);
+  transition: all 0.4s ease-in-out;
+}
+
+.intro-title {
+  line-height: 100%;
+}
+
+@media screen and (max-width: 375px) {
+  .intro-title {
+    font-size: 3rem;
+  }
+
+  .aboutMe-btn {
+    right: -15%;
+    bottom: -60%;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .aboutMe-btn {
+    right: -10%;
+    bottom: -40%;
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .aboutMe-btn {
+    right: -8%;
+    bottom: -20%;
+    height: 5rem;
+    width: 5rem;
+  }
+  .intro-circle-2 {
+    display: block;
+  }
+
+  .aboutMe-btn-text {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+}

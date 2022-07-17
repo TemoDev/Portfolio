@@ -35,8 +35,6 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleNav() {
-    // Toggles collapsed navabar on small screens
-    // this.nav.nativeElement.classList.toggle('nav-links--visible');
     this.navBtn.nativeElement.classList.toggle('burger-line--active');
     navTl.paused() || navTl.reversed() ? navTl.play() : navTl.reverse('-=0.4');
   }
