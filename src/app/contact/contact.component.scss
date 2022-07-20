@@ -1,0 +1,22 @@
+@import '../../styles.scss';
+
+li {
+  list-style: none;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.contact-link>svg>path {
+  transition: all 0.2s ease-in-out;
+  fill: white;
+}
+
+.contact-link:hover svg>path {
+  fill: $primary;
+}

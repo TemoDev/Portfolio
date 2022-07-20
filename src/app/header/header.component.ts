@@ -38,4 +38,9 @@ export class HeaderComponent implements OnInit {
     this.navBtn.nativeElement.classList.toggle('burger-line--active');
     navTl.paused() || navTl.reversed() ? navTl.play() : navTl.reverse('-=0.4');
   }
+
+  navigationLink(name: string) {
+    document.getElementById(name)!.scrollIntoView({behavior: 'smooth'});
+  }
+
 }

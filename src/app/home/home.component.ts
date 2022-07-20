@@ -12,4 +12,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  navigationLink(name: string) {
+    document.getElementById(name)!.scrollIntoView({behavior: 'smooth'});
+  }
 }

@@ -30,6 +30,7 @@ nav {
     .burger-line-1 {
       width: 50%;
     }
+
     .burger-line-3 {
       width: 50%;
       transform: translateX(50%);
@@ -90,14 +91,15 @@ nav {
   color: white;
   text-transform: uppercase;
   font-weight: 300;
+  cursor: pointer;
 }
 
-.nav-link > svg > path {
+.nav-link>svg>path {
   transition: all 0.2s ease-in-out;
   fill: white;
 }
 
-.nav-link:hover svg > path {
+.nav-link:hover svg>path {
   fill: $primary;
 }
 

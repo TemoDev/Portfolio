@@ -1,0 +1,38 @@
+@import '../../styles.scss';
+
+.work-card {
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2rem);
+}
+
+.work-card-btn {
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.work-circle {
+  position: absolute;
+  z-index: 0;
+  width: 15.875rem;
+  height: 30.125rem;
+  border-radius: 50%;
+  background-color: $primary;
+  filter: blur(8.75rem);
+}
+
+.work-circle-1 {
+  left: 0;
+  top: 10%;
+}
+
+.work-circle-2 {
+  background-color: $secondary;
+  right: 20%;
+  top: 10%;
+}
