@@ -9,18 +9,34 @@ export class WorksService {
 
   works: WorkModel[] = [
     new WorkModel(
-      'Film Info',
+      'Zilta',
       `Angular based project, which is using TMDB API for fetching different movie's data. Project includes Firebase Authentication for storing movies in watchlist.`,
+      '../../assets/zilta.jpg',
+      [ 'HTML', 'SCSS', 'Wordpress', 'Bootstrap'],
+      '',
+      'https://zilta.ge/'
+    ),
+    new WorkModel(
+      'Hydrogeology',
+      `Angular based project, which is using TMDB API for fetching different movie's data. Project includes Firebase Authentication for storing movies in watchlist.`,
+      '../../assets/hydrogeology.jpg',
+      [ 'HTML', 'SCSS'],
+      '',
+      'https://hydrogeology.ge/'
+    ),
+    new WorkModel(
+      'Film Info',
+      `Angular based project, which is using TMDB API for fetching different movie's data. Project includes Firebase Authentication and Realtime Database for storing movies in watchlist.`,
       '../../assets/filminfo.jpg',
-      [ 'Angular', 'HTML', 'SCSS', 'Typescript', 'Firebase'],
+      [ 'Angular', 'HTML', 'SCSS', 'Typescript', 'Firebase', 'Bootstrap'],
       'https://github.com/TemoDev/Film-Info',
-      '#'
+      ''
     ),
     new WorkModel(
       'Bose',
       'Bose concept website with beautiful GSAP animations and fully responsive on all device screens.',
       '../../assets/bose-1.jpg',
-      [ 'HTML', 'SCSS', 'Javascript', 'GSAP'],
+      [ 'HTML', 'SCSS', 'Javascript', 'GSAP' , 'Bootstrap'],
       'https://github.com/TemoDev/Bose-concept-website',
       'https://temodev.github.io/bose/'
     ),
@@ -28,9 +44,9 @@ export class WorksService {
       'Lexus Website',
       'Lexus concept car website built with Angular framework.',
       '../../assets/lexus-1.jpg',
-      ['Angular', 'HTML', 'SCSS', 'Typescript', 'GSAP'],
+      ['Angular', 'HTML', 'SCSS', 'Typescript', 'GSAP', 'Bootstrap'],
       'https://github.com/TemoDev/lexus-concept-website',
-      '#'
+      ''
     ),
     new WorkModel(
       'Weather',

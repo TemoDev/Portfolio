@@ -33,9 +33,11 @@
         <div class="d-inline-flex gap-2 work-card-btn">
           <a href="{{ work.codeUrl }}"
              class="fw-bold text-white"
+             [ngClass]="{'d-none': work.codeUrl == ''}"
              target=”_blank”>Code</a>
           <a href="{{ work.demoUrl }}"
              class="fw-bold text-white"
+             [ngClass]="{'d-none': work.demoUrl == ''}"
              target=”_blank”>Demo</a>
         </div>
 

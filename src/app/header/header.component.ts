@@ -1,7 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
-import gsap from 'gsap';
+import { gsap } from 'gsap';
 let navTl = gsap.timeline({ paused: true });
+let navIntroTl = gsap.timeline();
 
 @Component({
   selector: 'app-header',
@@ -14,10 +15,12 @@ export class HeaderComponent implements OnInit {
   @ViewChild('nav', { static: true })
   nav!: ElementRef<HTMLDivElement>;
   @ViewChild('navBtn') navBtn!: ElementRef<HTMLDivElement>;
+  @ViewChild('navContainer', { static: true }) navContainer!: ElementRef<HTMLDivElement>;
 
   constructor() {}
 
   ngOnInit(): void {
+    this.navIntroAnimation();
     navTl
       .to(this.navWrapper.nativeElement, {
         height: '100vh',
@@ -41,6 +44,16 @@ export class HeaderComponent implements OnInit {
 
   navigationLink(name: string) {
     document.getElementById(name)!.scrollIntoView({behavior: 'smooth'});
+  }
+
+  // Nav animation when page loads
+  navIntroAnimation() {
+    navIntroTl
+      .from(this.navContainer.nativeElement, {
+        y: "-100%",
+        duration: 1.5,
+        ease:"Power4.easeOut"   
+      })
   }
 
 }
