@@ -8,39 +8,42 @@
     <div class="work-circle work-circle-2"
          #workCircle2></div>
 
-    <h1 class="display-2 fw-bold mb-5">Portfolio</h1>
+    <h1 class="portfolio-title display-2 fw-bold mb-5">Portfolio</h1>
 
-    <div class="work-card d-md-flex w-100 mb-4 p-2 gap-3"
-         *ngFor="let work of workArr">
-      <!-- Card Image -->
-      <div class="d-flex align-items-center col-md-6">
-        <img src="{{ work.imgUrl }}"
-             class="img-fluid"
-             style="border-radius: 15px;"
-             alt="Image Name" />
-      </div>
-      <!-- Card Content -->
-      <div class="work-card-inner col-md-6">
-        <div class="work-title display-3 fw-bold my-2">{{ work.title }}</div>
-        <div class="work-description mb-2"
-             style="margin-right:2rem;">{{ work.description }}
+    <div #workCards
+         class="work-cards">
+      <div class="work-card d-md-flex w-100 mb-4 p-2 gap-3"
+           *ngFor="let work of workArr">
+        <!-- Card Image -->
+        <div class="d-flex align-items-center col-md-6">
+          <img src="{{ work.imgUrl }}"
+               class="img-fluid"
+               style="border-radius: 15px;"
+               alt="Image Name" />
         </div>
-        <h4 class="mb-1">Technologies:</h4>
-        <ul>
-          <li *ngFor="let tech of work.technologies">{{ tech }}</li>
-        </ul>
-        <!-- Card Buttons -->
-        <div class="d-inline-flex gap-2 work-card-btn">
-          <a href="{{ work.codeUrl }}"
-             class="fw-bold text-white"
-             [ngClass]="{'d-none': work.codeUrl == ''}"
-             target=”_blank”>Code</a>
-          <a href="{{ work.demoUrl }}"
-             class="fw-bold text-white"
-             [ngClass]="{'d-none': work.demoUrl == ''}"
-             target=”_blank”>Demo</a>
-        </div>
+        <!-- Card Content -->
+        <div class="work-card-inner col-md-6">
+          <div class="work-title display-3 fw-bold my-2">{{ work.title }}</div>
+          <div class="work-description mb-2"
+               style="margin-right:2rem;">{{ work.description }}
+          </div>
+          <h4 class="mb-1">Technologies:</h4>
+          <ul>
+            <li *ngFor="let tech of work.technologies">{{ tech }}</li>
+          </ul>
+          <!-- Card Buttons -->
+          <div class="d-inline-flex gap-2 work-card-btn">
+            <a href="{{ work.codeUrl }}"
+               class="fw-bold text-white"
+               [ngClass]="{'d-none': work.codeUrl == ''}"
+               target=”_blank”>Code</a>
+            <a href="{{ work.demoUrl }}"
+               class="fw-bold text-white"
+               [ngClass]="{'d-none': work.demoUrl == ''}"
+               target=”_blank”>Demo</a>
+          </div>
 
+        </div>
       </div>
     </div>
 

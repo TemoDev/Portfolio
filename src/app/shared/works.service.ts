@@ -10,17 +10,17 @@ export class WorksService {
   works: WorkModel[] = [
     new WorkModel(
       'Zilta',
-      `Angular based project, which is using TMDB API for fetching different movie's data. Project includes Firebase Authentication for storing movies in watchlist.`,
+      `Website for ventilation systems and accessories.`,
       '../../assets/zilta.jpg',
-      [ 'HTML', 'SCSS', 'Wordpress', 'Bootstrap'],
+      [ 'HTML', 'SCSS', 'Javascript','Wordpress', 'Bootstrap'],
       '',
       'https://zilta.ge/'
     ),
     new WorkModel(
       'Hydrogeology',
-      `Angular based project, which is using TMDB API for fetching different movie's data. Project includes Firebase Authentication for storing movies in watchlist.`,
+      `Multipage website.`,
       '../../assets/hydrogeology.jpg',
-      [ 'HTML', 'SCSS'],
+      [ 'HTML', 'SCSS', "Javascript"],
       '',
       'https://hydrogeology.ge/'
     ),

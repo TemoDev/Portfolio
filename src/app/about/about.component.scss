@@ -14,12 +14,15 @@
   p {
     margin: 0;
     line-height: 250%;
-    font-size: 1.7rem;
+    font-size: 1rem;
   }
 }
 
 .about-img {
   overflow: hidden;
+  display: inline-block;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  transition: clip-path 1.3s ease-in;
 
   img {
     max-width: 30rem;
@@ -37,4 +40,9 @@
     z-index: -1;
   }
 
+  .about-text {
+    p {
+      font-size: 1.7rem;
+    }
+  }
 }

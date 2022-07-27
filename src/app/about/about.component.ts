@@ -6,9 +6,17 @@ gsap.registerPlugin(ScrollTrigger);
 
   // About Section Intro Timeline
   const aboutAnimation = gsap.timeline({ 
+    delay: 0.7,
+    ease: "Power1.easeIn",
     scrollTrigger: {
       trigger: document.getElementById('about'),
-      toggleActions: 'play none none none'
+      toggleActions: 'play none none none',
+    }
+  });
+  const aboutParallax = gsap.timeline({
+    scrollTrigger: {
+      trigger: document.querySelector('.about-img'),
+      scrub: true
     }
   });
 
@@ -29,6 +37,7 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     this.aboutIntroAnimation();
+    this.aboutScrollAnimation();
   }
 
   aboutIntroAnimation() {
@@ -37,7 +46,6 @@ export class AboutComponent implements OnInit {
         opacity: 0,
         y: '100%',
         duration : 1,
-        delay: 0.7
       })
       .to(this.aboutIntroTitle.nativeElement, { 
         opacity: 0,
@@ -56,10 +64,36 @@ export class AboutComponent implements OnInit {
       }, "-=0.5")
       .from(this.aboutText.nativeElement.childNodes, {
         opacity: 0,
-        y: '100%',
+        y: '80px',
         duration : 1.2,
         stagger: 0.3
       }, "-=0.7")
+      .from(document.querySelector('.about-img'), {
+        "clip-path": "polygon(0 0, 100% 0, 100% 0, 0 0)",
+      }, "-=1.7")
+      .from(document.querySelector('.about-img img'), {
+        scale: 1.4,
+        duration : 1.5,
+        ease: "Power3.easeOut"
+      }, "-=0.7")
+      .from(document.querySelectorAll('.about-skills div'), {
+        opacity: 0,
+        y: '50%',
+        duration : 1,
+        stagger: 0.3
+      }, "-=1.5")
+  }
+  aboutScrollAnimation() {
+    aboutParallax
+    .from(
+      document.querySelector('.about-img'),{
+        yPercent: -10,
+        ease: "none",
+      }
+    ).to(document.querySelector('.about-img img'), {
+      yPercent: 10,
+      ease: "none",
+    })
   }
 
 }
